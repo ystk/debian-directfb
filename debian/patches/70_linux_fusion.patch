@@ -1,5 +1,9 @@
 Status: local
 
+---
+ include/linux/fusion.h |  350 +++++++++++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 350 insertions(+)
+
 --- /dev/null
 +++ b/include/linux/fusion.h
 @@ -0,0 +1,350 @@

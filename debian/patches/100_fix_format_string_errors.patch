@@ -1,0 +1,40 @@
+Description: Fix format string errors
+Author: Micah Gersten <micahg@ubuntu.com>
+
+---
+ src/idirectfb.c          |    8 ++++----
+ tools/directfb-csource.c |    2 +-
+ 2 files changed, 5 insertions(+), 5 deletions(-)
+
+--- a/src/idirectfb.c
++++ b/src/idirectfb.c
+@@ -310,14 +310,14 @@ IDirectFB_GetDeviceDescription( IDirectF
+      ret_desc->drawing_flags     = device_info.caps.drawing;
+      ret_desc->video_memory      = dfb_gfxcard_memory_length();
+ 
+-     snprintf( ret_desc->name,   DFB_GRAPHICS_DEVICE_DESC_NAME_LENGTH, device_info.name );
+-     snprintf( ret_desc->vendor, DFB_GRAPHICS_DEVICE_DESC_NAME_LENGTH, device_info.vendor );
++     snprintf( ret_desc->name,   DFB_GRAPHICS_DEVICE_DESC_NAME_LENGTH, "%s", device_info.name );
++     snprintf( ret_desc->vendor, DFB_GRAPHICS_DEVICE_DESC_NAME_LENGTH, "%s", device_info.vendor );
+ 
+      ret_desc->driver.major = driver_info.version.major;
+      ret_desc->driver.minor = driver_info.version.minor;
+ 
+-     snprintf( ret_desc->driver.name,   DFB_GRAPHICS_DRIVER_INFO_NAME_LENGTH,   driver_info.name );
+-     snprintf( ret_desc->driver.vendor, DFB_GRAPHICS_DRIVER_INFO_VENDOR_LENGTH, driver_info.vendor );
++     snprintf( ret_desc->driver.name,   DFB_GRAPHICS_DRIVER_INFO_NAME_LENGTH, "%s",  driver_info.name );
++     snprintf( ret_desc->driver.vendor, DFB_GRAPHICS_DRIVER_INFO_VENDOR_LENGTH, "%s", driver_info.vendor );
+ 
+      return DFB_OK;
+ }
+--- a/tools/directfb-csource.c
++++ b/tools/directfb-csource.c
+@@ -789,7 +789,7 @@ static DFBResult dump_rectangles (const
+           if (len < 0) {
+                int l = fprintf (fp, "  { \"%s\", ", v);
+ 
+-               fprintf (fp, blanks - len + l);
++               fprintf (fp, "%s", blanks - len + l);
+                fprintf (fp, "{ x : %4d, y : %4d, w : %4d, h : %4d } }",
+                         rect->x, rect->y, rect->w, rect->h);
+           }

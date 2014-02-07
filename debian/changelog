@@ -1,3 +1,45 @@
+directfb (1.2.10.0-5) unstable; urgency=low
+
+  * Update debian/control:
+    - bump debhelper build dependency to 9.
+    - drop libsysfs-dev build dependency. (Closes: #627651)
+    - bump Standards-Version to 3.9.3 (no changes needed).
+  * Add debian/patches/100_fix_format_string_errors.patch:
+    Fix FTBFS with -Werror=format-security. Thanks to Micah Gersten.
+    (Closes: #645809)
+  * libpng1.5 transition:
+    - add support for libpng 1.5. (Closes: #648138)
+    - replace libpng12-dev build dependency by libpng-dev. (Closes: #662302)
+  * Add multiarch support. (Closes: #663039)
+
+ -- Fathi Boudra <fabo@debian.org>  Sat, 19 May 2012 20:22:53 +0300
+
+directfb (1.2.10.0-4.3) unstable; urgency=low
+
+  * Non-maintainer upload.
+  * Fix "directfb ftbfs on armel. Implicit declaration error"
+    - Thanks Peter Green for bug report and patch (Closes: #644782)
+  * Remove m4 macros when calling clean target 
+
+ -- Hector Oron <zumbi@debian.org>  Mon, 17 Oct 2011 12:53:01 +0100
+
+directfb (1.2.10.0-4.2) unstable; urgency=low
+
+  * Non-maintainer upload.
+  * Changed designation of the architecture for libsysfs-dev and libts-dev
+    from list of architectures to linux-any. (Closes: #596949, #634512)
+  * Fix Build on Renesas sh4. (Closes: #635888)
+    Update patches/02_fix_sh772x_build.patch.
+
+ -- Nobuhiro Iwamatsu <iwamatsu@debian.org>  Wed, 10 Aug 2011 07:27:09 +0900
+
+directfb (1.2.10.0-4.1) unstable; urgency=low
+
+  * Non-maintainer upload.
+  * Fix typo for LDFLAGS. (Closes: #624875, #625178)
+
+ -- Andres Mejia <amejia@debian.org>  Sun, 24 Jul 2011 13:19:08 -0400
+
 directfb (1.2.10.0-4) unstable; urgency=low
 
   * Drop libmpeg3-dev build-dependency/dependency. (Closes: #507527)

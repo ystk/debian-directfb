@@ -3,6 +3,10 @@ Status: distro-specific
 # In a distro, we can't rely on compile time detection of these.
 # If we have to ship a config, it would be with these disabled anyway.
 
+---
+ lib/direct/ppcasm_memcpy_cachable.S |    2 --
+ 1 file changed, 2 deletions(-)
+
 --- a/lib/direct/ppcasm_memcpy_cachable.S
 +++ b/lib/direct/ppcasm_memcpy_cachable.S
 @@ -34,8 +34,6 @@

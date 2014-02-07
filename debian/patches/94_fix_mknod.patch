@@ -1,0 +1,43 @@
+Description: directfb ftbfs on armel. Implicit declaration error
+ Fix for ARM builds failing on:
+  ../../../gfxdrivers/davinci/davinci_c64x.c: In function 'davinci_c64x_open':
+  ../../../gfxdrivers/davinci/davinci_c64x.c:1900:6: error: implicit declaration of function 'mknod' [-Werror=implicit-function-declaration]
+  cc1: some warnings being treated as errors
+ .
+ directfb (1.2.10.0-4.3) unstable; urgency=low
+ .
+   * Non-maintainer upload.
+   * Fix "directfb ftbfs on armel. Implicit declaration error"
+     - Thanks Peter Green for bug report and patch (Closes: #644782)
+   * Remove m4 macros when calling clean target
+Author: Hector Oron <zumbi@debian.org>
+Bug-Debian: http://bugs.debian.org/644782
+
+---
+The information above should follow the Patch Tagging Guidelines, please
+checkout http://dep.debian.net/deps/dep3/ to learn about the format. Here
+are templates for supplementary fields that you might want to add:
+
+Origin: <vendor|upstream|other>, <url of original patch>
+Bug: <url in upstream bugtracker>
+Bug-Debian: http://bugs.debian.org/644782
+Bug-Ubuntu: https://launchpad.net/bugs/<bugnumber>
+Forwarded: http://directfb.org/mantis/view.php?id=16
+Reviewed-By: <name and email of someone who approved the patch>
+Last-Update: <YYYY-MM-DD>
+
+---
+ gfxdrivers/davinci/davinci_c64x.c |    2 ++
+ 1 file changed, 2 insertions(+)
+
+--- a/gfxdrivers/davinci/davinci_c64x.c
++++ b/gfxdrivers/davinci/davinci_c64x.c
+@@ -37,6 +37,8 @@
+ #include <sys/ioctl.h>
+ #include <sys/mman.h>
+ #include <sys/types.h>
++#include <sys/stat.h>
++
+ #include <unistd.h>
+ 
+ #include <directfb_util.h>

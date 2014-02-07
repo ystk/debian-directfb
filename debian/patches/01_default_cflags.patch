@@ -3,6 +3,10 @@ Author: Fathi Boudra <fabo@debian.org>
 Upstream clear default CFLAGS and force -O3.
 Use default CFLAGS on Debian.
 
+---
+ configure.in |    8 ++++----
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+
 --- a/configure.in
 +++ b/configure.in
 @@ -154,11 +154,11 @@ AC_CHECK_HEADERS(linux/compiler.h linux/

@@ -4,3 +4,6 @@
 70_linux_fusion.patch
 90_linux_config.h.patch
 93_fix_unicode_key_handling.patch
+94_fix_mknod.patch
+100_fix_format_string_errors.patch
+directfb-1.2.10_libpng-1.5.patch

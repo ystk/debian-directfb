@@ -1,16 +1,29 @@
 Author: Nobuhiro Iwamatsu <iwamatsu@nigauri.org>
 
 Fix FTBFS on Renesas SH (sh4) because libjpeg doesn't link against sh772x driver.
-See http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=536314
+Fix FTBFS sh7722_jpegtool.c:80: undefined reference to `direct_page_align' (#635888)
+
+---
+ gfxdrivers/sh772x/Makefile.am |    4 ++++
+ 1 file changed, 4 insertions(+)
 
 --- a/gfxdrivers/sh772x/Makefile.am
 +++ b/gfxdrivers/sh772x/Makefile.am
-@@ -32,6 +32,8 @@ libsh7722_jpeg_la_LDFLAGS = \
+@@ -32,6 +32,9 @@ libsh7722_jpeg_la_LDFLAGS = \
  	-export-dynamic		\
  	-avoid-version
  
 +libsh7722_jpeg_la_LIBADD = \
-+        $(LIBJPEG)
++	$(top_builddir)/src/libdirectfb.la  \
++	$(LIBJPEG)
  
  bin_PROGRAMS = sh7722_jpegtool
+ 
+@@ -40,6 +43,7 @@ sh7722_jpegtool_SOURCES = \
+ 
+ sh7722_jpegtool_LDADD = \
+ 	$(top_builddir)/src/libdirectfb.la	\
++	$(top_builddir)/lib/direct/libdirect.la \
+ 	libsh7722_jpeg.la
+ 
  

@@ -11,13 +11,12 @@ Build-Depends: autoconf,
                libjpeg-dev,
                libpng-dev,
                libtool,
-               libts-dev [linux-any],
                libx11-dev,
                libxext-dev,
                pkg-config,
                x11proto-core-dev,
                zlib1g-dev
-Standards-Version: 3.9.3
+Standards-Version: 3.9.6
 Section: libs
 Homepage: http://www.directfb.org/
 Vcs-Browser: http://svn.debian.org/wsvn/pkg-directfb/directfb/

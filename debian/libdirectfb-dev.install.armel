@@ -39,7 +39,6 @@ usr/lib/*/directfb-*/inputdrivers/libdirectfb_penmount.a
 usr/lib/*/directfb-*/inputdrivers/libdirectfb_ps2mouse.a
 usr/lib/*/directfb-*/inputdrivers/libdirectfb_serialmouse.a
 usr/lib/*/directfb-*/inputdrivers/libdirectfb_sonypi.a
-usr/lib/*/directfb-*/inputdrivers/libdirectfb_tslib.a
 usr/lib/*/directfb-*/inputdrivers/libdirectfb_ucb1x00_ts.a
 usr/lib/*/directfb-*/inputdrivers/libdirectfb_wm97xx_ts.a
 usr/lib/*/directfb-*/interfaces/IDirectFBFont/libidirectfbfont_default.a

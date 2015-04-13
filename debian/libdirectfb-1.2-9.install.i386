@@ -23,7 +23,6 @@ usr/lib/*/directfb-*/inputdrivers/libdirectfb_penmount.so
 usr/lib/*/directfb-*/inputdrivers/libdirectfb_ps2mouse.so
 usr/lib/*/directfb-*/inputdrivers/libdirectfb_serialmouse.so
 usr/lib/*/directfb-*/inputdrivers/libdirectfb_sonypi.so
-usr/lib/*/directfb-*/inputdrivers/libdirectfb_tslib.so
 usr/lib/*/directfb-*/inputdrivers/libdirectfb_wm97xx_ts.so
 usr/lib/*/directfb-*/interfaces/IDirectFBFont/libidirectfbfont_default.so
 usr/lib/*/directfb-*/interfaces/IDirectFBFont/libidirectfbfont_dgiff.so

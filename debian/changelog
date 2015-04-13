@@ -1,3 +1,13 @@
+directfb (1.2.10.0-5.1) unstable; urgency=medium
+
+  * Non-maintainer upload.
+  * d/control: drop build depend on libts-dev. 
+  * d/libdirectfb-1.2-9.install.*: drop install libdirectfb_tslib.so
+  * d/libdirectfb-dev.install.*: drop install libdirectfb_tslib.a
+  * d/control: bump Standards-Version to 3.9.6 (no changes needed).
+
+ -- Hector Oron <zumbi@debian.org>  Mon, 16 Jun 2014 13:51:00 +0200
+
 directfb (1.2.10.0-5) unstable; urgency=low
 
   * Update debian/control:
